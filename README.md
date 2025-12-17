@@ -7,7 +7,7 @@
 | [![NuGet](https://img.shields.io/nuget/dt/Dirkster.AvalonDock.Themes.VS2010.svg)](http://nuget.org/packages/Dirkster.AvalonDock.Themes.VS2010)          | [Dirkster.AvalonDock.Themes.VS2010](http://nuget.org/packages/Dirkster.AvalonDock.Themes.VS2010)
 | [![NuGet](https://img.shields.io/nuget/dt/Dirkster.AvalonDock.Themes.VS2013.svg)](http://nuget.org/packages/Dirkster.AvalonDock.Themes.VS2013)          | [Dirkster.AvalonDock.Themes.VS2013](http://nuget.org/packages/Dirkster.AvalonDock.Themes.VS2013) (see [Wiki](https://github.com/Dirkster99/AvalonDock/wiki/WPF-VS-2013-Dark-Light-Demo-Client) )
 
-![Net4](https://badgen.net/badge/Framework/.Net&nbsp;4/blue) ![NetCore3](https://badgen.net/badge/Framework/NetCore&nbsp;3/blue) ![Net4](https://badgen.net/badge/Framework/.NET&nbsp;5/blue)
+![Net48](https://badgen.net/badge/Framework/.Net&nbsp;4.8/blue) ![Net8](https://badgen.net/badge/Framework/.NET&nbsp;8/blue) ![Net10](https://badgen.net/badge/Framework/.NET&nbsp;10/blue)
 
 ## Master Branch
 [![Build status](https://ci.appveyor.com/api/projects/status/kq2wyupx5hm7fok2/branch/master?svg=true)](https://ci.appveyor.com/project/Dirkster99/avalondock/branch/master)[![Release](https://img.shields.io/github/release/Dirkster99/avalondock.svg)](https://github.com/Dirkster99/avalondock/releases/latest)&nbsp;[Continuous Integration](https://ci.appveyor.com/project/Dirkster99/AvalonDock/build/artifacts)
@@ -50,8 +50,8 @@ Be sure to checkout the <a href="https://github.com/Dirkster99/AvalonDock/wiki">
 
 ## Building AvalonDock from Source
 
-This project supports multitargeting frameworks (NetCore 3 and .Net 4). This means that it requires
-Visual Studio Community 2019 or better to build.
+This project supports multitargeting frameworks (.NET 4.8, .NET 8, .NET 10). This means that it requires
+Visual Studio 2022 or better to build.
 
 # Feature Added - Dark and Light VS 2013 Theme
 
@@ -120,6 +120,42 @@ to also theme standard elements, such as, button and textblock etc.
 
 # Mile Stone History
 
+## Version 4.72.4
+
+### Fixed
+- **VS2013 Theme**: Fixed DocumentPaneControl template to use correct border resource keys
+  - Changed BorderBrush from `DocumentWellTabSelectedActiveBackground` to `DocumentWellTabSelectedActiveBorder`
+  - Changed BorderBrush from `DocumentWellTabSelectedInactiveBackground` to `DocumentWellTabSelectedInactiveBorder`
+  - This ensures the tab container border (the underline under all tabs) uses the correct customizable border keys
+
+### Changed
+- All packages upgraded to version 4.72.4 for consistency
+
+## Version 4.72.3
+
+### Added
+- **VS2013 Theme**: Added dedicated border resource keys for document tabs, enabling full customization of tab borders
+  - `DocumentWellTabSelectedActiveBorder` - Border color for active selected tab
+  - `DocumentWellTabSelectedInactiveBorder` - Border color for inactive selected tab
+  - `DocumentWellTabUnselectedBorder` - Border color for unselected tab
+  - `DocumentWellTabUnselectedHoveredBorder` - Border color for hovered unselected tab
+- Border resource keys implemented in all three VS2013 color schemes (Dark, Light, Blue)
+
+### Changed
+- Updated target frameworks from `net40`, `netcoreapp3.0`, `net5.0-windows` to `net48`, `net8.0-windows`, `net10.0-windows`
+- All packages now support modern .NET frameworks
+
+### Usage Example
+```xaml
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:reskeys="clr-namespace:AvalonDock.Themes;assembly=AvalonDock.Themes.VS2013">
+
+    <!-- Customize active tab border -->
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}"
+                     Color="Red" />
+</ResourceDictionary>
+```
 
 ## Fixes and Features Added in Version 4.72.0
 
