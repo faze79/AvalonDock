@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.72.7] - 2025-12-17
+
+### Changed
+- Updated all packages to version 4.72.7 for consistency across the entire library
+
 ## [4.72.6] - 2025-12-17
 
 ### Fixed
