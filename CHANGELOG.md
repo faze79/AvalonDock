@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.72.8] - 2025-12-17
+
+### Fixed
+- **VS2013 Theme**: Adjusted border thickness for proper tab rendering
+  - Border "BD" (line 221): Changed BorderThickness from `0,0,0,2` to `0,0,0,1`
+  - Border "Bd" (line 326): Changed BorderThickness from `0,0,0,2` to `1,1,1,0`
+  - This ensures correct visual appearance of tab borders and separators
+
+### Changed
+- Updated all packages to version 4.72.8 for consistency across the entire library
+
 ## [4.72.7] - 2025-12-17
 
 ### Changed
