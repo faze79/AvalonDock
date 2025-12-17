@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.72.4] - 2025-12-17
+
+### Fixed
+- **VS2013 Theme**: Fixed DocumentPaneControl template to use correct border resource keys
+  - Line 220: Changed BorderBrush from `DocumentWellTabSelectedActiveBackground` to `DocumentWellTabSelectedActiveBorder`
+  - Line 287: Changed BorderBrush from `DocumentWellTabSelectedInactiveBackground` to `DocumentWellTabSelectedInactiveBorder`
+  - This fixes the issue where the tab container border was using Background keys instead of the newly created Border keys
+
 ## [4.72.3] - 2025-12-17
 
 ### Added

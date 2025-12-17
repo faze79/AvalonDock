@@ -217,7 +217,7 @@
 							<Border
 								x:Name="BD"
 								Grid.ColumnSpan="2"
-								BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}}"
+								BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}}"
 								BorderThickness="0,0,0,2" />
 							<avalonDockControls:DocumentPaneTabPanel
 								x:Name="HeaderPanel"
@@ -284,7 +284,7 @@
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding SelectedItem.IsActive, RelativeSource={RelativeSource Self}}" Value="False" />
                             </MultiDataTrigger.Conditions>
-                            <Setter TargetName="BD" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
+                            <Setter TargetName="BD" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBorder}}" />
                         </MultiDataTrigger>
 
                         <Trigger Property="IsEnabled" Value="false">
