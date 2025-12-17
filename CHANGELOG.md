@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.72.6] - 2025-12-17
+
+### Fixed
+- **VS2013 Theme**: Fixed Document TabItem style (ItemContainerStyle) to use correct border resource keys
+  - Line 325: Changed BorderBrush from self-binding to `DocumentWellTabUnselectedBorder`
+  - Line 343: Added BorderBrush setter for active state using `DocumentWellTabSelectedActiveBorder`
+  - Line 355: Added BorderBrush setter for inactive state using `DocumentWellTabSelectedInactiveBorder`
+  - Line 375: Added BorderBrush setter for hovered state using `DocumentWellTabUnselectedHoveredBorder`
+  - This ensures document tab borders use the customizable border resource keys instead of binding to background
+
 ## [4.72.5] - 2025-12-17
 
 ### Added

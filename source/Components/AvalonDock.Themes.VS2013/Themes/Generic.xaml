@@ -322,7 +322,7 @@
                                     <Border
 										x:Name="Bd"
 										Background="{TemplateBinding Background}"
-										BorderBrush="{Binding Background, RelativeSource={RelativeSource Self}}"
+										BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBorder}}"
 										BorderThickness="0,0,0,2" />
                                     <ContentPresenter
 										x:Name="Content"
@@ -340,6 +340,7 @@
                                     <!--  Document Well : Tab / Selected, active  -->
                                     <DataTrigger Binding="{Binding IsActive}" Value="True">
                                         <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}}" />
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveText}}" />
                                         <Setter Property="Panel.ZIndex" Value="1" />
                                     </DataTrigger>
@@ -351,6 +352,7 @@
                                             <Condition Binding="{Binding IsSelected}" Value="True" />
                                         </MultiDataTrigger.Conditions>
                                         <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBorder}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveText}}" />
                                     </MultiDataTrigger>
 
@@ -370,6 +372,7 @@
                                             <Condition Property="Selector.IsSelected" Value="false" />
                                         </MultiTrigger.Conditions>
                                         <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBackground}}" />
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBorder}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredText}}" />
                                         <Setter Property="Panel.ZIndex" Value="0" />
                                     </MultiTrigger>
