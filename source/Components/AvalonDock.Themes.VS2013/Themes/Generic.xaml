@@ -218,7 +218,7 @@
 								x:Name="BD"
 								Grid.ColumnSpan="2"
 								BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}}"
-								BorderThickness="0,0,0,2" />
+								BorderThickness="0,0,0,1" />
 							<avalonDockControls:DocumentPaneTabPanel
 								x:Name="HeaderPanel"
 								Grid.Row="0"
@@ -307,6 +307,7 @@
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="AutomationProperties.Name" Value="{Binding Title, StringFormat='Document Tab - {0}'}" />
                     <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
                     <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBackground}}" />
                     <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedText}}" />
@@ -321,8 +322,8 @@
                                     <Border
 										x:Name="Bd"
 										Background="{TemplateBinding Background}"
-										BorderBrush="{Binding Background, RelativeSource={RelativeSource Self}}"
-										BorderThickness="0,0,0,2" />
+										BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBorder}}"
+										BorderThickness="1,1,1,0" />
                                     <ContentPresenter
 										x:Name="Content"
 										HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
@@ -339,6 +340,7 @@
                                     <!--  Document Well : Tab / Selected, active  -->
                                     <DataTrigger Binding="{Binding IsActive}" Value="True">
                                         <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}}" />
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveText}}" />
                                         <Setter Property="Panel.ZIndex" Value="1" />
                                     </DataTrigger>
@@ -350,6 +352,7 @@
                                             <Condition Binding="{Binding IsSelected}" Value="True" />
                                         </MultiDataTrigger.Conditions>
                                         <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBorder}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveText}}" />
                                     </MultiDataTrigger>
 
@@ -369,6 +372,7 @@
                                             <Condition Property="Selector.IsSelected" Value="false" />
                                         </MultiTrigger.Conditions>
                                         <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBackground}}" />
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBorder}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredText}}" />
                                         <Setter Property="Panel.ZIndex" Value="0" />
                                     </MultiTrigger>
@@ -457,6 +461,7 @@
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="AutomationProperties.Name" Value="{Binding Title, StringFormat='Tool Window Tab - {0}'}" />
                     <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowTabUnselectedBackground}}" />
                     <Setter Property="BorderBrush" Value="Transparent" />
                     <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowTabUnselectedText}}" />
@@ -1445,6 +1450,7 @@
     </Style>
 
     <Style TargetType="{x:Type avalonDockControls:LayoutDocumentTabItem}">
+        <Setter Property="AutomationProperties.Name" Value="{Binding Model.Title, StringFormat='Layout Document Tab - {0}'}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutDocumentTabItem}">
@@ -1688,6 +1694,7 @@
     </Style>
 
     <Style TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">
+        <Setter Property="AutomationProperties.Name" Value="{Binding Model.Title, StringFormat='Layout Anchorable Tab - {0}'}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">
