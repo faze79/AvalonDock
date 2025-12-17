@@ -1458,7 +1458,7 @@
 							Padding="1,0"
 							Height="19"
 							Background="{TemplateBinding Background}"
-							BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.Background}}"
+							BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBorder}}"
 							BorderThickness="0,0,0,1">
                             <Grid>
 								<Grid.ColumnDefinitions>
@@ -1536,6 +1536,7 @@
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsLastFocusedDocument}" Value="true" />
                             </MultiDataTrigger.Conditions>
+							<Setter TargetName="Header" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBorder}}" />
 							<Setter TargetName="Header" Property="BorderThickness" Value="0" />
 							<Setter TargetName="Header" Property="Padding" Value="0" />
 							<Setter TargetName="PART_ImgPinClose" Property="Fill" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactiveGlyph}}" />
@@ -1547,6 +1548,7 @@
                                 <Condition Binding="{Binding IsLastFocusedDocument}" Value="true" />
                                 <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="True" />
                             </MultiDataTrigger.Conditions>
+							<Setter TargetName="Header" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBorder}}" />
 							<Setter TargetName="Header" Property="BorderThickness" Value="0" />
 							<Setter TargetName="Header" Property="Padding" Value="0" />
 							<Setter TargetName="DocumentCloseButton" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactiveHoveredBackground}}" />
@@ -1560,6 +1562,7 @@
                                 <Condition Binding="{Binding IsLastFocusedDocument}" Value="true" />
                                 <Condition Binding="{Binding IsMouseCaptured, ElementName=DocumentCloseButton}" Value="True" />
                             </MultiDataTrigger.Conditions>
+							<Setter TargetName="Header" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBorder}}" />
 							<Setter TargetName="Header" Property="BorderThickness" Value="0" />
 							<Setter TargetName="Header" Property="Padding" Value="0" />
 							<Setter TargetName="DocumentCloseButton" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactivePressedBackground}}" />
@@ -1569,6 +1572,7 @@
 
                         <!--  Document Well : Tab : Button / Selected, active  -->
                         <DataTrigger Binding="{Binding IsActive}" Value="true">
+							<Setter TargetName="Header" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}}" />
 							<Setter TargetName="Header" Property="BorderThickness" Value="0" />
 							<Setter TargetName="Header" Property="Padding" Value="0" />
 							<Setter TargetName="PART_ImgPinClose" Property="Fill" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActiveGlyph}}" />
@@ -1580,6 +1584,7 @@
                                 <Condition Binding="{Binding IsActive}" Value="true" />
                                 <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="True" />
                             </MultiDataTrigger.Conditions>
+							<Setter TargetName="Header" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}}" />
 							<Setter TargetName="Header" Property="BorderThickness" Value="0" />
 							<Setter TargetName="Header" Property="Padding" Value="0" />
 							<Setter TargetName="DocumentCloseButton" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActiveHoveredBackground}}" />
@@ -1593,6 +1598,7 @@
                                 <Condition Binding="{Binding IsActive}" Value="true" />
                                 <Condition Binding="{Binding IsMouseCaptured, ElementName=DocumentCloseButton}" Value="True" />
                             </MultiDataTrigger.Conditions>
+							<Setter TargetName="Header" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}}" />
 							<Setter TargetName="Header" Property="BorderThickness" Value="0" />
 							<Setter TargetName="Header" Property="Padding" Value="0" />
 							<Setter TargetName="DocumentCloseButton" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActivePressedBackground}}" />
@@ -1607,6 +1613,7 @@
 								<Condition Binding="{Binding IsLastFocusedDocument}" Value="False" />
 								<Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource TemplatedParent}}" Value="True" />
 							</MultiDataTrigger.Conditions>
+							<Setter TargetName="Header" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBorder}}" />
 							<Setter TargetName="PART_ImgPinClose" Property="Fill" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredGlyph}}" />
 						</MultiDataTrigger>
 
