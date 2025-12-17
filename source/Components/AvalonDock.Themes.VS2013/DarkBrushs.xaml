@@ -101,6 +101,10 @@
 		options:Freeze="true"
 		Color="#F1F1F1" />
 	<SolidColorBrush
+		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBorder}"
+		options:Freeze="true"
+		Color="#007ACC" />
+	<SolidColorBrush
 		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}"
 		options:Freeze="true"
 		Color="#3F3F46" />
@@ -109,6 +113,10 @@
 		options:Freeze="true"
 		Color="#F1F1F1" />
 	<SolidColorBrush
+		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBorder}"
+		options:Freeze="true"
+		Color="#3F3F46" />
+	<SolidColorBrush
 		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBackground}"
 		options:Freeze="true"
 		Color="#2D2D30" />
@@ -116,6 +124,10 @@
 		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedText}"
 		options:Freeze="true"
 		Color="#F1F1F1" />
+	<SolidColorBrush
+		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBorder}"
+		options:Freeze="true"
+		Color="#2D2D30" />
 	<!--  AccentColor  -->
 	<SolidColorBrush
 		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBackground}"
@@ -125,6 +137,10 @@
 		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredText}"
 		options:Freeze="true"
 		Color="#FFFFFF" />
+	<SolidColorBrush
+		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBorder}"
+		options:Freeze="true"
+		Color="#1C97EA" />
 
 	<!--  Document Well : Tab : X Button Foreground color for selected document  -->
 	<SolidColorBrush

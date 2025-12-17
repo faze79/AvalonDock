@@ -56,13 +56,17 @@ namespace AvalonDock.Themes.VS2013.Themes
 		public static readonly ComponentResourceKey DocumentWellTabSelectedActiveBackground = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabSelectedActiveBackground");
 
 		public static readonly ComponentResourceKey DocumentWellTabSelectedActiveText = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabSelectedActiveText");
+		public static readonly ComponentResourceKey DocumentWellTabSelectedActiveBorder = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabSelectedActiveBorder");
 		public static readonly ComponentResourceKey DocumentWellTabSelectedInactiveBackground = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabSelectedInactiveBackground");
 		public static readonly ComponentResourceKey DocumentWellTabSelectedInactiveText = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabSelectedInactiveText");
+		public static readonly ComponentResourceKey DocumentWellTabSelectedInactiveBorder = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabSelectedInactiveBorder");
 		public static readonly ComponentResourceKey DocumentWellTabUnselectedBackground = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabUnselectedBackground");
 		public static readonly ComponentResourceKey DocumentWellTabUnselectedText = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabUnselectedText");
+		public static readonly ComponentResourceKey DocumentWellTabUnselectedBorder = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabUnselectedBorder");
 		// AccentColor
 		public static readonly ComponentResourceKey DocumentWellTabUnselectedHoveredBackground = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabUnselectedHoveredBackground");
 		public static readonly ComponentResourceKey DocumentWellTabUnselectedHoveredText = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabUnselectedHoveredText");
+		public static readonly ComponentResourceKey DocumentWellTabUnselectedHoveredBorder = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabUnselectedHoveredBorder");
 
 		// Document Well : Tab : Button
 		public static readonly ComponentResourceKey DocumentWellTabButtonSelectedActiveGlyph = new ComponentResourceKey(typeof(ResourceKeys), "DocumentWellTabButtonSelectedActiveGlyph");
