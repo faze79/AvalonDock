@@ -307,6 +307,7 @@
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="AutomationProperties.Name" Value="{Binding Title, StringFormat='Document Tab - {0}'}" />
                     <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
                     <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBackground}}" />
                     <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedText}}" />
@@ -457,6 +458,7 @@
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="AutomationProperties.Name" Value="{Binding Title, StringFormat='Tool Window Tab - {0}'}" />
                     <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowTabUnselectedBackground}}" />
                     <Setter Property="BorderBrush" Value="Transparent" />
                     <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowTabUnselectedText}}" />
@@ -1445,6 +1447,7 @@
     </Style>
 
     <Style TargetType="{x:Type avalonDockControls:LayoutDocumentTabItem}">
+        <Setter Property="AutomationProperties.Name" Value="{Binding Model.Title, StringFormat='Layout Document Tab - {0}'}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutDocumentTabItem}">
@@ -1688,6 +1691,7 @@
     </Style>
 
     <Style TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">
+        <Setter Property="AutomationProperties.Name" Value="{Binding Model.Title, StringFormat='Layout Anchorable Tab - {0}'}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">

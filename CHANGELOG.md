@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.72.5] - 2025-12-17
+
+### Added
+- **VS2013 Theme**: Added unique AutomationProperties.Name to all TabItem styles for improved accessibility
+  - Document TabItem: "Document Tab - {Title}"
+  - Tool Window TabItem: "Tool Window Tab - {Title}"
+  - LayoutDocumentTabItem: "Layout Document Tab - {Title}"
+  - LayoutAnchorableTabItem: "Layout Anchorable Tab - {Title}"
+
 ## [4.72.4] - 2025-12-17
 
 ### Fixed
